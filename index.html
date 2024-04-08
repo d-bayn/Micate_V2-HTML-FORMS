@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <img src="my logo.png" height="auto" alt="my logo.png" style="max-width: 80%;">
+        <h2>The House of Donuts</h2>
+    </div>
+    <div class="container">
+    <form action="#">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <div id="dropdown">
+            <button class="dropdown-toggle">
+                <span>Menu</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Italian</a></li>
+                <li class="menu-item"><a href="#">Chinese</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="submenu-toggle">
+                        <span>Healthy Options</span>
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#">Vegetarian</a></li>
+                        <li class="submenu-item"><a href="#">Vegan</a></li>
+                        <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+            <script src='script.js'></script>    
+
+        <label>Mode of Payment:</label><br>
+        <select id="payment" name="payment">
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="cash">Cash</option>
+        </select><br>
+
+        <label>Order Type:</label><br>
+        <input type="radio" id="dine_in" name="order_type" value="dine_in">
+        <label for="dine_in">Dine In</label><br>
+        <input type="radio" id="take_out" name="order_type" value="take_out">
+        <label for="take_out">Take Out</label><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="5" cols="50"></textarea><br>
+
+        <button type="button" onclick="placeOrder()">Place Order</button>
+        <button type="button" onclick="cancelOrder()">Cancel Order</button>
+
+    </form>
+
+    <script>
+        function placeOrder()
+        {
+            alert("Order placed successfully!");
+        }
+
+        function cancelOrder()
+        {
+            alert("Ordered cancel!");
+        }
+    </script>
+
+</body>
+</html>
